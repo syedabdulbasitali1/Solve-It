@@ -24,8 +24,9 @@ body{
 
 }
 
-input{
-    width: 320px;
+.screen{
+    /* width: 320px; */
+    width: 97%;
     border: none;
     padding: 24px;
     margin: 10px;
@@ -44,10 +45,11 @@ input::placeholder{
 
 button{
     border: none;
-    width: 60px;
+    /* width: 60px; */
+    width: 100px;
     height: 60px;
     margin: 10px;
-    border-radius: 50%;
+    border-radius: 50px;
     background: transparent;
     color: #ffffff;
     font-size: 20px;
@@ -62,3 +64,15 @@ button{
 .operator{
     color: #6dee0a;
 }
+
+.screen-last {
+    min-height: 32px;
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+  }
+
+   .screen-current {
+    min-height: 64px;
+    font-size: 40px;
+    transition: all 0.4s ease-out;
+  }
