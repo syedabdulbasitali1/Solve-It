@@ -1,9 +1,28 @@
 
-
 let firstOperand = ''
 let secondOperand = ''
 let currentOperation = null
 let shouldResetScreen = false
+
+document.querySelector(".bin").addEventListener("click", function () {
+    const prankPopup = document.getElementById("prank-popup");
+    const returnPopup = document.getElementById("return-popup");
+
+    // Show the first popup
+    prankPopup.classList.add("visible");
+    setTimeout(() => {
+      prankPopup.classList.remove("visible");
+
+      // Show the second popup after a delay
+      setTimeout(() => {
+        returnPopup.classList.add("visible");
+        setTimeout(() => {
+          returnPopup.classList.remove("visible");
+        }, 3000); // Hide the second popup after 3 seconds
+      }, 500); // Delay between first and second popup
+    }, 3000); // Hide the first popup after 3 seconds
+  });
+
 
 const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".opt");
@@ -142,3 +161,10 @@ function operate(operator, a, b) {
       return null
   }
 }
+
+document.querySelector(".bin").addEventListener("click", () => {
+    document.querySelector("body").style.cursor = "none";
+    document.querySelectorAll("*").forEach(element => {
+        element.style.cursor = "none";
+    });
+});
